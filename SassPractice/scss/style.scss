@@ -1,24 +1,64 @@
-h1 {
-    color: red;
+@import "config";
+@import "buttons";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.ulone {
-    border: 1px solid orange;
-    li {
-        color: #333;
+
+
+
+.wrapper {
+    display: flex;
+    flex-direction:column ;
+
+    header {
+        color: $primary-text;
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+        background: $primary-color;
+        h1 {
+            font-size: 20px;
+
+        }
+
     }
-}
-
-.ultwo {
-    li {
-        color: green;
-
-        a{
-            color: red;
+    nav {
+        color: $primary-color;
+        ul {
+            display: flex;
+            flex-direction:center;
+            align-items: center;
+            justify-content: center;
         }
     }
 
-    
-}
+    section {
+        color: $secondary-text;
+        background-color: $primart-bg-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
+        ul{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px 30px;
+             
+            li{
+                span {
+                    display: grid;
+                    place-content: center;
+                }
+            }
+        }
+
+    }
+}
 

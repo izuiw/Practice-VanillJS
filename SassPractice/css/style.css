@@ -1,16 +1,1 @@
-h1 {
-  color: red;
-}
-
-.ulone {
-  border: 1px solid orange;
-}
-.ulone li {
-  color: #333;
-}
-
-.ultwo li {
-  color: green;
-}
-
-/*# sourceMappingURL=style.css.map */
+button{display:inline-block;border-radius:5px;padding:8px 20px;margin:50px;background:#0e6cff;color:#fff}button:hover{transform:scale(0.9)}*{margin:0;padding:0;list-style:none}.wrapper{display:flex;flex-direction:column}.wrapper header{color:#fff;display:flex;height:50px;align-items:center;justify-content:space-between;background:#0e6cff}.wrapper header h1{font-size:20px}.wrapper nav{color:#0e6cff}.wrapper nav ul{display:flex;flex-direction:center;align-items:center;justify-content:center}.wrapper section{color:#000;background-color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center}.wrapper section ul{display:grid;grid-template-columns:repeat(3, 1fr);grid-gap:10px 30px}.wrapper section ul li span{display:grid;place-content:center}/*# sourceMappingURL=style.css.map */
