@@ -1,7 +1,6 @@
-// const API_URL = "https://animal-api-two.vercel.app/";
-
-import App from "./App";
+import App from "./App.js";
 
 const $app = document.getElementById("app");
 
+//생성자
 new App($app);
