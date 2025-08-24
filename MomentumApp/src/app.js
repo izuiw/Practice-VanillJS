@@ -3,14 +3,27 @@ const loginForm = document.querySelector("#login-form");
 const greeting = document.querySelector("#greeting");
 
 const HIDDEN_CLASSNAME = "hidden";
-loginForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const userName = loginInput.value;
-  loginForm.classList.add(HIDDEN_CLASSNAME);
+const USERNAME_KEY = "userName";
 
-  //localStorage에 user저장
-  localStorage.setItem("userName", userName);
+const saveUserName = localStorage.getItem(USERNAME_KEY);
 
-  greeting.innerHTML = `Hello ${userName}!`;
+function paintGreetiongs(userName) {
   greeting.classList.remove(HIDDEN_CLASSNAME);
-});
+  greeting.innerHTML = `Hello ${localStorage.getItem(USERNAME_KEY)}!`;
+}
+
+console.log(saveUserName);
+if (saveUserName === null) {
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const userName = loginInput.value;
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+
+    //localStorage에 user저장
+    localStorage.setItem(USERNAME_KEY, userName);
+    paintGreetiongs(userName);
+  });
+} else {
+  paintGreetiongs(saveUserName);
+}
