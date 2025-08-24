@@ -9,10 +9,9 @@ const saveUserName = localStorage.getItem(USERNAME_KEY);
 
 function paintGreetiongs(userName) {
   greeting.classList.remove(HIDDEN_CLASSNAME);
-  greeting.innerHTML = `Hello ${localStorage.getItem(USERNAME_KEY)}!`;
+  greeting.innerHTML = `Hello ${userName}!`;
 }
 
-console.log(saveUserName);
 if (saveUserName === null) {
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit", (event) => {
