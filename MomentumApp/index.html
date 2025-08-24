@@ -12,7 +12,26 @@
       <input required maxlength="15" type="text" placeholder="What is your name?" />
       <input type="submit" value="LogIn" />
     </form>
+    <h2 id="clock">00:00</h2>
     <h1 id="greeting" class="hidden"></h1>
-    <script src="./src/app.js"></script>
+    <form id="todo-form">
+      <input type="text" placeholder="Write a To Do and Press Enter" required />
+    </form>
+    <ul id="todo-list"></ul>
+
+    <div id="quote">
+      <span></span><br />
+      <span></span>
+    </div>
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
+    <script src="./js/components/greetings.js"></script>
+    <script src="./js/components/clock.js"></script>
+    <script src="./js/components/quotes.js"></script>
+    <script src="./js/components/background.js"></script>
+    <script src="./js/components/todo.js"></script>
+    <script src="./js/components/weather.js"></script>
   </body>
 </html>
